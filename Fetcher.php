@@ -54,7 +54,7 @@ class Fetcher extends Manager {
     $Self->model  = $model;
     $Self->method = $method;
 
-    $Self->src_key    = $src_key;
+    $Self->src_key    = strtok($src_key, ':');
     $Self->dst_key    = $Self->getDstKey($src_key);
     $Self->args       = $args;
     $Self->batch      = $batch;
